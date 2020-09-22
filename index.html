@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar bg-dark">
+            <h1 class="text-light mx-auto">Weather Dashboard</h1>
+        </nav>
+    </header>
+    <main class="row">
+        <section class="col-6 col-sm-4 bg-light">
+            <div class="row ml-2 mt-1">
+                <div class="col-12 bg-light">
+                    <h4>Search for a City:</h4>
+                    <div class="row">
+                        <div class="col-12">
+                            <form class="input-group" id="search-form">
+                                <input type="text" class="form-control" id="search-input">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary" type="submit" id="search-button">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4 ml-2">
+                <div class="col-12 bg-light">
+                    <div class="card">
+                        <ul class="list-group list-group-flush" id="search-list">
+                            <!-- Dynamically added when cities are searched -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="col-6 col-sm-8">
+            <div class="card mt-4 mr-2" id="current-row">
+                <!-- Dynamically added when location is chosen or page loads -->
+            </div>
+            <div class="row mr-2 mt-4">
+                <div class="col-12">
+                    <h3>5-Day Forecast:</h3>
+                </div>
+            </div>
+            <div class="row mr-2" id="daily-row">
+            </div>
+        </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+
+</html>
