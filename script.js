@@ -25,7 +25,7 @@ function renderSearchedCities() {
     });
 }
 
-// Grabs latitude and longitude and responds with current weather and 7 day forecast
+// takes the latitude and longitude and responds with current weather and a 5 da7 forecast
 function currentWeather(cityName, lat, lon) {
     $.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=692496d9b9647012326807b41694aa6b&units=imperial`, function (response) {
         let currentDate = convertDate(response.current.dt),
@@ -40,7 +40,7 @@ function currentWeather(cityName, lat, lon) {
     })
 }
 
-// Render current weather
+// renders the current weather
 function renderCurrentWeather(cityName, currentDate, currentTemp, currentHumidity, currentWind, currentUV, currentIcon, currentIconDescription) {
     $("#current-row").html("")
     let divCard = $("<div>").addClass("card-body"),
@@ -56,7 +56,7 @@ function renderCurrentWeather(cityName, currentDate, currentTemp, currentHumidit
     checkUVIndex(currentUV);
 }
 
-// Render 5 Day Forecast
+// shows the 5 Day Forecast
 function renderFiveDayForecast(response) {
     $("#daily-row").html("")
     for (let i = 1; i < 6; i++) {
@@ -79,7 +79,7 @@ function renderFiveDayForecast(response) {
     }
 }
 
-// Highlight UV Index
+// UV Index
 function checkUVIndex(currentUV) {
     if (currentUV <= 2) {
         $("#uv-btn").addClass("btn-success");
